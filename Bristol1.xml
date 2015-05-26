@@ -8,25 +8,17 @@
           </block>
         </value>
         <next>
-          <block type="movement_stop" id="91">
-            <next>
-              <block type="movement_stutter" id="108">
-                <next>
-                  <block type="controls_repeat" id="156" inline="true">
-                    <value name="TIMES">
-                      <block type="math_number" id="169">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
-                    <statement name="DO">
-                      <block type="movement_left" id="119"></block>
-                    </statement>
-                    <next>
-                      <block type="movement_stop" id="180"></block>
-                    </next>
-                  </block>
-                </next>
+          <block type="controls_repeat" id="156" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="169">
+                <field name="NUM">10</field>
               </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_left" id="119"></block>
+            </statement>
+            <next>
+              <block type="movement_stop" id="180"></block>
             </next>
           </block>
         </next>
