@@ -1,4 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="robot_delay" id="136" inline="true" x="-187" y="16"></block>
   <block type="movement_forward" id="71" x="104" y="35">
     <next>
       <block type="robot_delay" id="73" inline="true">
@@ -8,9 +9,29 @@
           </block>
         </value>
         <next>
-          <block type="movement_stop" id="91"></block>
+          <block type="movement_stop" id="91">
+            <next>
+              <block type="movement_stutter" id="108">
+                <next>
+                  <block type="controls_repeat" id="156" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number" id="169">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="movement_left" id="119"></block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
+  </block>
+  <block type="controls_whileUntil" id="149" inline="false" x="-207" y="104">
+    <field name="MODE">WHILE</field>
   </block>
 </xml>
